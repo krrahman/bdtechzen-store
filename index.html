@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDTechZen | Footwear & Sneaker Store</title>
+    <meta name="description" content="Premium men's, women's, and kids' footwear store in Bangladesh featuring handcrafted leather shoes, performance sneakers, variable size/color editions, and nationwide Cash on Delivery." />
+    <meta property="og:title" content="BDTechZen | Footwear & Sneaker Store" />
+    <meta property="og:description" content="Premium men's, women's, and kids' footwear store in Bangladesh featuring handcrafted leather shoes, performance sneakers, variable size/color editions, and nationwide Cash on Delivery." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/bdtechzen-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#fafafc] text-zinc-950 font-sans antialiased selection:bg-violet-600 selection:text-white">
+    <!-- Static Netlify Forms Detectors (enables cloud submission capture & Netlify Email Alerts on manual ZIP deploy) -->
+    <form name="bdtechzen-new-order" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="bdtechzen-new-order" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="orderNumber" />
+      <input type="text" name="grandTotalBDT" />
+      <input type="text" name="paymentMethod" />
+      <input type="text" name="customerName" />
+      <input type="text" name="customerPhone" />
+      <input type="email" name="customerEmail" />
+      <textarea name="shippingAddress"></textarea>
+      <textarea name="itemsSummary"></textarea>
+      <input type="text" name="createdAt" />
+    </form>
+
+    <form name="bdtechzen-new-user" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="bdtechzen-new-user" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="userName" />
+      <input type="email" name="userEmail" />
+      <input type="text" name="userPhone" />
+      <input type="text" name="country" />
+      <input type="text" name="createdAt" />
+    </form>
+
+    <form name="bdtechzen-contact-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="bdtechzen-contact-inquiry" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="createdAt" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

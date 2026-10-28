@@ -1,0 +1,39 @@
+# BDTechZen Footwear Storefront — Netlify Full-Stack Production Configuration
+
+[build]
+  command = "npm run build:netlify"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--include=dev"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["mysql2", "nodemailer"]
+  included_files = ["seed/**"]
+
+# 1. Route all backend API endpoints to Netlify Serverless Express Function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# 2. Dynamic SEO Sitemap & Robots via Serverless Function
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/api/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/.netlify/functions/api/robots.txt"
+  status = 200
+
+# 3. Single Page Application (SPA) client-side routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
