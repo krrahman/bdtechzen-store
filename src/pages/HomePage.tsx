@@ -42,9 +42,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onSelectProduct 
       headline:
         settings?.heroBanner.title &&
         settings.heroBanner.title !== 'Shoes built to walk Dhaka, cut from full-grain calfskin.' &&
-        settings.heroBanner.title !== 'Shoes built to walk, cut from full-grain calfskin.'
-          ? settings.heroBanner.title
-          : 'Walk with confidence, anywhere',
+        settings.heroBanner.title !== 'Shoes built to walk, cut from full-grain calfskin.' &&
+        settings.heroBanner.title !== 'Walk with confidence, anywhere'
+          ? settings.heroBanner.title.replace(/\s*\|\s*/g, '\n')
+          : 'Walk with confidence,\nanywhere',
       body:
         settings?.heroBanner.subtitle ||
         'We pair Italian-tanned calfskin and water-resistant suede with cushioned anatomical footbeds—so your morning commute in Motijheel feels as effortless as dinner in Gulshan.',
@@ -108,7 +109,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onSelectProduct 
                 {activeHero.provenance}
               </p>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-[2.85rem] font-semibold font-display tracking-tight leading-[1.12] text-white">
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.35rem] xl:text-[2.65rem] font-semibold font-display tracking-tight leading-[1.15] text-white whitespace-pre-line">
                 {activeHero.headline}
               </h1>
 
