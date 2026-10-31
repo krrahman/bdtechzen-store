@@ -41,9 +41,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onSelectProduct 
       provenance: 'Dhaka Cordwainer Studio · Direct to Consumer',
       headline:
         settings?.heroBanner.title &&
-        settings.heroBanner.title !== 'Shoes built to walk Dhaka, cut from full-grain calfskin.'
+        settings.heroBanner.title !== 'Shoes built to walk Dhaka, cut from full-grain calfskin.' &&
+        settings.heroBanner.title !== 'Shoes built to walk, cut from full-grain calfskin.'
           ? settings.heroBanner.title
-          : 'Shoes built to walk, cut from full-grain calfskin.',
+          : 'Walk with confidence, anywhere',
       body:
         settings?.heroBanner.subtitle ||
         'We pair Italian-tanned calfskin and water-resistant suede with cushioned anatomical footbeds—so your morning commute in Motijheel feels as effortless as dinner in Gulshan.',
